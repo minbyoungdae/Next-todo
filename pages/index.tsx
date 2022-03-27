@@ -1,16 +1,11 @@
-import { NextPage } from "next";
-import styled from "styled-components";
+import { NextPage } from 'next';
+import TodoList from '../components/TodoList';
+import { TodoType } from '../types/todo';
 
-const Container = styled.div`
-  padding: 20px;
-`;
+const todos: TodoType[] = [{ id: 1, text: '마트가기', color: 'red', checked: false }];
 
 const index: NextPage = () => {
-  return (
-    <Container>
-      <h1>styled component</h1>
-    </Container>
-  );
+  return <TodoList todos={todos} />;
 };
 
 export default index;
